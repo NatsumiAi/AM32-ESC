@@ -8,7 +8,7 @@
 		(date "2026-01-17")
 	)
 	(lib_symbols
-		(symbol "Amplifier_Current:INA199xxDCK"
+		(symbol "Amplifier_Current:INA240A1PW"
 			(pin_names
 				(offset 0.127)
 			)
@@ -24,7 +24,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "INA199xxDCK"
+			(property "Value" "INA240A1PW"
 				(at 3.81 -2.54 0)
 				(effects
 					(font
@@ -33,8 +33,8 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-				(at 1.27 1.27 0)
+			(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
+				(at 0 -16.51 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -42,7 +42,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina199.pdf"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina240.pdf"
 				(at 3.81 3.81 0)
 				(effects
 					(font
@@ -51,7 +51,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "INA199 26-V, Bidirectional, Zero-Drift, Low- or High-Side, Voltage-Output, Current-Shunt Monitor, SOT-363, SC-70"
+			(property "Description" "High- and Low-Side, Bidirectional, Zero-Drift, Current-Sense Amplifier With Enhanced PWM Rejection, 20V/V, TSSOP-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -60,7 +60,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "current monitor shunt sensor bidirectional"
+			(property "ki_keywords" "current monitor shunt sensor bidirectional high low"
 				(at 0 0 0)
 				(effects
 					(font
@@ -69,7 +69,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "*SC?70*"
+			(property "ki_fp_filters" "TSSOP*4.4x3mm*P0.65mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -78,7 +78,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "INA199xxDCK_0_1"
+			(symbol "INA240A1PW_0_1"
 				(polyline
 					(pts
 						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
@@ -92,7 +92,7 @@
 					)
 				)
 			)
-			(symbol "INA199xxDCK_1_1"
+			(symbol "INA240A1PW_1_1"
 				(pin input line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -103,7 +103,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -121,7 +121,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -135,11 +135,30 @@
 					(name "V+"
 						(effects
 							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+				)
+				(pin passive line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -153,11 +172,11 @@
 					(name "GND"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -165,17 +184,35 @@
 						)
 					)
 				)
-				(pin input line
-					(at 2.54 -7.62 90)
-					(length 6.35)
-					(name "REF"
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 5.08)
+					(name "REF2"
 						(effects
 							(font
 								(size 0.508 0.508)
 							)
 						)
 					)
-					(number "1"
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -7.62 90)
+					(length 6.35)
+					(name "REF1"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -193,7 +230,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4784,6 +4821,12 @@
 		(uuid "406b3920-4a98-4c83-b7e4-9d59b8d2f484")
 	)
 	(junction
+		(at 175.26 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "418b7e3d-079c-4f45-af6f-deed201c5e44")
+	)
+	(junction
 		(at 113.03 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4862,6 +4905,12 @@
 		(uuid "6c86e517-e982-4596-a8a9-c7caef47f5d2")
 	)
 	(junction
+		(at 172.72 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b0410ca-bd31-44be-98e7-2339ddfe9fc6")
+	)
+	(junction
 		(at 218.44 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4926,12 +4975,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b38aa9eb-066c-4103-9413-1c3a26840903")
-	)
-	(junction
-		(at 172.72 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b97322c3-6707-4df8-8c80-f94941bc97db")
 	)
 	(junction
 		(at 222.25 46.99)
@@ -5623,7 +5666,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 73.66) (xy 177.8 73.66)
+			(xy 172.72 73.66) (xy 175.26 73.66)
 		)
 		(stroke
 			(width 0)
@@ -5810,6 +5853,16 @@
 			(type default)
 		)
 		(uuid "6b874310-0fe4-4cf3-a999-5cf0178e2b4f")
+	)
+	(wire
+		(pts
+			(xy 175.26 73.66) (xy 177.8 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b8bab11-4914-493c-880e-819b9c8024ee")
 	)
 	(wire
 		(pts
@@ -21138,7 +21191,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 255.27 44.45 0)
 			(effects
 				(font
@@ -21547,7 +21600,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 208.28 93.98 0)
 			(effects
 				(font
@@ -21616,7 +21669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 189.23 146.05 0)
 			(effects
 				(font
@@ -21754,7 +21807,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 129.54 93.98 0)
 			(effects
 				(font
@@ -21888,7 +21941,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 189.23 148.59 0)
 			(effects
 				(font
@@ -22022,7 +22075,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 168.91 109.22 0)
 			(effects
 				(font
@@ -22683,7 +22736,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 262.89 44.45 0)
 			(effects
 				(font
@@ -22821,7 +22874,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 250.19 35.56 0)
 			(effects
 				(font
@@ -23426,7 +23479,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 205.74 114.3 0)
 			(effects
 				(font
@@ -23694,7 +23747,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 177.8 45.72 0)
 			(effects
 				(font
@@ -23738,7 +23791,8 @@
 	)
 	(symbol
 		(lib_id "EasyEDA_Lib:ZX-SH1.0-4PWT")
-		(at 199.39 148.59 0)
+		(at 199.39 146.05 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -23746,7 +23800,7 @@
 		(dnp no)
 		(uuid "55d755f1-5508-4ff8-99ad-bf917b65d794")
 		(property "Reference" "U7"
-			(at 199.898 147.066 0)
+			(at 199.898 147.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23755,7 +23809,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 205.74 148.5899 0)
+			(at 205.74 146.0501 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23765,7 +23819,7 @@
 			)
 		)
 		(property "Footprint" "EasyEDA_Lib:CONN-SMD_4P-P1.00_MEGASTAR_ZX-SH1.0-4PWT"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23774,7 +23828,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/datasheet/ZX-SH1.0-4PWT/8430315.html"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23783,7 +23837,7 @@
 			)
 		)
 		(property "Description" "Pins Structure:1x4P Pitch:1mm Mounting Type:Surface Mount, Right Angle Reference Series:SH Number of Pins:4P Number of Rows:1 Number of PINs Per Row:4 Row Spacing:- Current Rating:1A Contact Material:Brass Contact Plating:Tin Operating Temperature:-40°C~+8"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23792,7 +23846,7 @@
 			)
 		)
 		(property "Manufacturer Part" "ZX-SH1.0-4PWT"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23801,7 +23855,7 @@
 			)
 		)
 		(property "Manufacturer" "Megastar(兆星)"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23810,7 +23864,7 @@
 			)
 		)
 		(property "Supplier Part" "C7430446"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23819,7 +23873,7 @@
 			)
 		)
 		(property "Supplier" "LCSC"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23828,7 +23882,7 @@
 			)
 		)
 		(property "LCSC Part Name" "1x4P 间距:1mm 卧贴 系列:SH"
-			(at 199.39 148.59 0)
+			(at 199.39 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23955,7 +24009,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 205.74 99.06 0)
 			(effects
 				(font
@@ -25077,7 +25131,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 267.97 31.75 0)
 			(effects
 				(font
@@ -25211,7 +25265,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 267.97 35.56 0)
 			(effects
 				(font
@@ -25356,7 +25410,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 168.91 93.98 0)
 			(effects
 				(font
@@ -25624,7 +25678,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 208.28 109.22 0)
 			(effects
 				(font
@@ -25758,7 +25812,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 220.98 62.23 0)
 			(effects
 				(font
@@ -25894,7 +25948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "4.7k"
 			(at 220.726 70.104 90)
 			(effects
 				(font
@@ -25903,7 +25957,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 218.44 69.85 0)
 			(effects
 				(font
@@ -26161,86 +26215,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Current:INA199xxDCK")
-		(at 175.26 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9751fe6d-d836-41c1-a56b-2c58509d59cc")
-		(property "Reference" "U4"
-			(at 187.96 59.6198 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "INA199xxDCK"
-			(at 187.96 62.1598 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 176.53 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina199.pdf"
-			(at 179.07 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "INA199 26-V, Bidirectional, Zero-Drift, Low- or High-Side, Voltage-Output, Current-Shunt Monitor, SOT-363, SC-70"
-			(at 175.26 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "cb250cf0-2c4b-42b8-911a-b20c5e8a0c86")
-		)
-		(pin "4"
-			(uuid "0d4fa268-a82f-4a42-8aac-6504eadb2de9")
-		)
-		(pin "2"
-			(uuid "ad447ce1-e340-41b5-b5af-09d8bde2f37e")
-		)
-		(pin "1"
-			(uuid "45ba439a-534d-4c90-ad85-44ea5f0d45c6")
-		)
-		(pin "6"
-			(uuid "bb6e959e-c7df-4387-b3b4-ec82dfbeb396")
-		)
-		(pin "3"
-			(uuid "198923f5-aede-43ce-810b-f83e81d0d542")
-		)
-		(instances
-			(project ""
-				(path "/b0485907-bc26-4b1c-9c8b-77c81e40d8b5"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 259.08 73.66 0)
 		(unit 1)
@@ -26466,7 +26440,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 187.96 29.21 0)
 			(effects
 				(font
@@ -26535,7 +26509,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 250.19 31.75 0)
 			(effects
 				(font
@@ -26995,7 +26969,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127 99.06 0)
 			(effects
 				(font
@@ -27542,7 +27516,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 97.79 72.39 0)
 			(effects
 				(font
@@ -28032,7 +28006,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 259.08 44.45 0)
 			(effects
 				(font
@@ -28101,7 +28075,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 267.97 39.37 0)
 			(effects
 				(font
@@ -28170,7 +28144,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 99.06 0)
 			(effects
 				(font
@@ -28239,7 +28213,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 170.18 45.72 0)
 			(effects
 				(font
@@ -28442,7 +28416,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 166.37 114.3 0)
 			(effects
 				(font
@@ -28576,7 +28550,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 250.19 39.37 0)
 			(effects
 				(font
@@ -28678,6 +28652,91 @@
 			(project "AM32电调"
 				(path "/b0485907-bc26-4b1c-9c8b-77c81e40d8b5"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Current:INA240A1PW")
+		(at 175.26 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d95be99a-7092-4b97-a29d-f375191e3f3d")
+		(property "Reference" "U8"
+			(at 181.864 59.944 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA240A1PW"
+			(at 182.88 62.484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
+			(at 175.26 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina240.pdf"
+			(at 179.07 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High- and Low-Side, Bidirectional, Zero-Drift, Current-Sense Amplifier With Enhanced PWM Rejection, 20V/V, TSSOP-8"
+			(at 175.26 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "b2a4a8b5-f2f0-4e94-9b24-791ddaae9b9f")
+		)
+		(pin "2"
+			(uuid "127d7f80-fb1b-47fa-87b0-19c649f6dd1d")
+		)
+		(pin "4"
+			(uuid "ce39e81b-764c-4e4a-8742-7e090997d678")
+		)
+		(pin "6"
+			(uuid "c14d6343-f2c1-4eda-8b76-2237fc8b7723")
+		)
+		(pin "5"
+			(uuid "da821e25-a2ff-47d7-b3cf-254e8171c5f4")
+		)
+		(pin "1"
+			(uuid "6290c1f6-4cd8-43df-9e87-be558620619d")
+		)
+		(pin "3"
+			(uuid "f2b483bc-9d5d-4b67-a170-17c8cfe9ee94")
+		)
+		(pin "8"
+			(uuid "ced132cf-2848-41d2-8377-714906e3a25c")
+		)
+		(instances
+			(project ""
+				(path "/b0485907-bc26-4b1c-9c8b-77c81e40d8b5"
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -28852,7 +28911,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127 114.3 0)
 			(effects
 				(font
@@ -28986,7 +29045,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 129.54 109.22 0)
 			(effects
 				(font
@@ -29588,7 +29647,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD_AKL:R_0402_1005Metric_Pad0.72x0.64mm"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 185.42 66.04 0)
 			(effects
 				(font
